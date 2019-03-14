@@ -34,3 +34,8 @@ I spent most of my assessment time trying here!:
 - I installed Kafka and run a Kafka-connect to produce a test file and consume it: `connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties`
 
 Here I also tried to run several Kafka images like `https://hub.docker.com/r/landoop/fast-data-dev` and `https://hub.docker.com/r/wurstmeister/kafka` but it didn't work for several reasons.
+
+
+## Summary
+
+It was a challenging experience especially since most of the tech/tools are completely new to me. but I learned a lot from it and looking forward to learn much more. Thank you for this opportunity!.
