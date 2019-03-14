@@ -21,7 +21,7 @@ I spent most of my assessment time trying here!:
 `java.lang.NoClassDefFoundError: org/apache/hadoop/hbase/HBaseConfiguration`
  I couldn't solve it until I rebuild the app using IntelliJ IDEA this time!
 - Then I tried to load csv to HBase using HBase shell : 
-> ./bin/hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=',' -Dimporttsv.columns='HBASE_ROW_KEY, main:eventId, main:driverId, main:driverName, main:eventTime, main:eventType, main:latitudeColumn, main:longitudeColumn, main:routeId, main:routeName, main:truckId' dangerous_driving ./tmp/dangerous-driver.csv
+`./bin/hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=',' -Dimporttsv.columns='HBASE_ROW_KEY, main:eventId, main:driverId, main:driverName, main:eventTime, main:eventType, main:latitudeColumn, main:longitudeColumn, main:routeId, main:routeName, main:truckId' dangerous_driving ./tmp/dangerous-driver.csv`
  but it didn't work.
 - I tried to load cvs file from Spark use Spark HBase connector : https://github.com/hortonworks-spark/shc but got `json4s error`.
 - Finally I used `table.put` to load the csv file line by line by when read the file using `spark.read` I got `Error: Task not serializable` so I used `Source.fromFile` to read the file and load it to HBase.
