@@ -17,7 +17,9 @@ Due to some restrictions I couldn't run HDP so I did the alternative steps.
 I spent most of my assessment time trying here!:
 
 - Since I use Windows I installed HBase using Cygwin: https://hbase.apache.org/cygwin.html.
-- After that I tried to make the connection between Spark and HBase but it throwed `java.lang.NoClassDefFoundError: org/apache/hadoop/hbase/HBaseConfiguration` I couldn't solve it until I rebuild the app using IntelliJ IDEA this time!
+- After that I tried to make the connection between Spark and HBase but it throwed:
+`java.lang.NoClassDefFoundError: org/apache/hadoop/hbase/HBaseConfiguration`
+ I couldn't solve it until I rebuild the app using IntelliJ IDEA this time!
 - Then I tried to load csv to HBase using HBase shell : 
 > ./bin/hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=',' -Dimporttsv.columns='HBASE_ROW_KEY, main:eventId, main:driverId, main:driverName, main:eventTime, main:eventType, main:latitudeColumn, main:longitudeColumn, main:routeId, main:routeName, main:truckId' dangerous_driving ./tmp/dangerous-driver.csv
  but it didn't work.
